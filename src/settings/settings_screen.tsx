@@ -71,23 +71,23 @@ export const SettingsScreen = () => {
         <Body>
             <Logo src={logoPath} />
             <Container>
-                <H1>TweetGPT Settings</H1>
+                <H1>Configurações BordBot</H1>
                 <SettingsBlock>
                     <H2>OpenAI API Token {warning}</H2>
                     <Space height={3} />
-                    <Subtitle>Required. You can find your Secret API key in your <a href="https://platform.openai.com/account/api-keys">OpenAI User settings</a>.</Subtitle>
+                    <Subtitle>Necessário. Você pode encontrar sua Secret API Key em <a href="https://platform.openai.com/account/api-keys">OpenAI User settings</a>.</Subtitle>
                     <Space height={10} />
-                    <TextInput type="password" placeholder='Put your secret API token here' value={openAIToken} onChange={(e) => changeOpenAIToken(e.target.value)}/>
+                    <TextInput type="password" placeholder='Coloque sua API KEY aqui' value={openAIToken} onChange={(e) => changeOpenAIToken(e.target.value)}/>
                 </SettingsBlock>
                 <SettingsBlock>
                     <H2>Text Generation</H2>
                     <Space height={10} />
-                    <Checkbox value={isAddSignature} onChange={changeSignature} label='Add TweetGPT Signature' />
+                    <Checkbox value={isAddSignature} onChange={changeSignature} label='Adicionar assinatura BordBot' />
                     <Space height={10} />
-                    <Checkbox value={isAddTopicForReplies} onChange={changeTopic} label='Ask for tweet topic in replies' />
+                    <Checkbox value={isAddTopicForReplies} onChange={changeTopic} label='Perguntar por um tópico antes de tweetar' />
                 </SettingsBlock>
                 <SettingsBlock>
-                    <H2>Language</H2>
+                    <H2>Linguagem</H2>
                     <Space height={10} />
                     <Selector value={selectedLanguage} onChange={changeLanguage} options={languageOptions} />
                 </SettingsBlock>
